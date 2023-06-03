@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Cormorant+SC:wght@300&family=Edu+SA+Beginner&family=Lato&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:wght@100;200;700&family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;1,200;1,700&family=Roboto+Mono:ital,wght@1,700&family=Ubuntu:wght@300;400;500&display=swap");
+.diamond {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transform: rotate(45deg);
+}
+
+.diamond:before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transform: rotate(45deg);
+}
+
+.diamond:after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transform: rotate(45deg);
+}
+.hexagon {
+  width: 100px;
+  height: 55px;
+  background-color: purple;
+  position: relative;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 27.5px solid purple;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 27.5px solid purple;
+}
+.pentagon {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid orange;
+  position: relative;
+}
+
+.pentagon:before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: -50px;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid orange;
+}
+
+.pentagon:after {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: 50px;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid orange;
+}
+.rectangle {
+  width: 200px;
+  height: 100px;
+  background-color: yellow;
+}
+.slant-container {
+  position: relative;
+  overflow: hidden;
+  /* width: 300px;
+  height: 200px; */
+}
+
+.slant-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f5f5f5;
+  transform: skewY(-8deg);
+  transform-origin: top left;
+  padding: 20px;
+  color: #333333;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 60px solid rgb(120, 53, 15);
+}
